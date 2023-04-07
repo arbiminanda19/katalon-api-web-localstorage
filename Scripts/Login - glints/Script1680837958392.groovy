@@ -16,14 +16,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.json.*
+import groovy.json.JsonSlurper as JsonSlurper
 
-WebUI.openBrowser('')
+response = WS.sendRequest(findTestObject('Login - glints'))
 
-//simple localStorage key
-WebUI.navigateToUrl('https://staging.cicle.app/')
-WebUI.executeJavaScript("localStorage.setItem('token', '" + GlobalVariable.accessTokenCicle + "')", null)
-WebUI.navigateToUrl('https://staging.cicle.app/companies/63f801bce76c3efbb1cdfd13/profiles/633ea7ce8146ca2857e6a9fe')
-WebUI.delay(60)
-WebUI.executeJavaScript("localStorage.clear()", null)
+def jsonSlurper = new JsonSlurper()
+def jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent())
 
+GlobalVariable.accessTokenGlints = jsonResponse.access_token

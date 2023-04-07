@@ -20,10 +20,25 @@ import groovy.json.*
 
 WebUI.openBrowser('')
 
-//simple localStorage key
-WebUI.navigateToUrl('https://staging.cicle.app/')
-WebUI.executeJavaScript("localStorage.setItem('token', '" + GlobalVariable.accessTokenCicle + "')", null)
-WebUI.navigateToUrl('https://staging.cicle.app/companies/63f801bce76c3efbb1cdfd13/profiles/633ea7ce8146ca2857e6a9fe')
-WebUI.delay(60)
-WebUI.executeJavaScript("localStorage.clear()", null)
+//localStorage key with json object
+class tokenObject { 
+	String token
+}
+def jsonObjectToken = new tokenObject( 
+	token: GlobalVariable.accessTokenGlints,
+)
 
+//def jsonObject = [session: jsonObjectToken]
+
+class localStorage {
+	Object session
+}
+def jsonObject = new localStorage(
+	session: jsonObjectToken,
+)
+//jsonString =  new JsonBuilder( jsonObject ).toPrettyString()
+def jsonString = JsonOutput.toJson(jsonObject)
+WebUI.navigateToUrl('https://employers.staging.glints.id')
+WebUI.executeJavaScript("localStorage.setItem('glintsEmployersApp','" + jsonString + "')", null)
+WebUI.navigateToUrl('https://employers.staging.glints.id/dashboard')
+WebUI.delay(60)

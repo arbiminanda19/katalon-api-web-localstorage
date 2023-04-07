@@ -51,7 +51,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzM2VhN2NlODE0NmNhMjg1N2U2YTlmZSIsImdvb2dsZUlkIjoiMTA4MjgwMDUwNDMxNTgzMjQzNDE2IiwiZW1haWwiOiJhcmJpbWluYW5kYTEwQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoiTXVoYW1tYWQgQXJiaSBNaW5hbmRhX0lRQTE2IiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UwZVVGWXo0MGp5emJUWTZ3MDkxYkJONE9mYmFHaWU3MGZzLU1OMXNBPXM5Ni1jIiwiYmlvIjoiTXVoYW1tYWQgQXJiaSBNaW5hbmRhX0lRQTE2Iiwic3RhdHVzIjoiTXVoYW1tYWQgQXJiaSBNaW5hbmRhX0lRQTE2IiwiZGVmYXVsdENvbXBhbnkiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjItMTAtMDZUMTA6MDI6NTQuMjA5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMDNUMDA6MTU6MTIuMDI3WiIsIl9fdiI6MH0sImlhdCI6MTY4MDc5NTczNywiZXhwIjoxNjgzMzg3NzM3fQ.-qwrM3wH4wrUy1SIGVUc3KSCgsXss1GbUxV16S_mJfQ'</initValue>
       <name>accessTokenCicle</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>accessTokenGlints</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

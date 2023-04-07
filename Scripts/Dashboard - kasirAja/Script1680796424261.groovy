@@ -43,10 +43,10 @@ def jsonObject = new LocalStorage(
 	refreshToken: GlobalVariable.refreshToken,
 	role: GlobalVariable.role,
 )
-jsonString =  new JsonBuilder( jsonObject ).toPrettyString()
+//jsonString =  new JsonBuilder( jsonObject ).toPrettyString()
+def jsonString = JsonOutput.toJson(jsonObject)
 WebUI.navigateToUrl('https://kasirdemo.belajarqa.com')
-WebUI.executeJavaScript("localStorage.setItem('KASIRAJA_USER'," + jsonString + ")", null)
+WebUI.executeJavaScript("localStorage.setItem('KASIRAJA_USER','" + jsonString + "')", null)
 WebUI.navigateToUrl('https://kasirdemo.belajarqa.com/dashboard')
-WebUI.click(findTestObject('Object Repository/Page_kasirAja/h3_kasirAja'))
-WebUI.executeJavaScript("localStorage.clear()", null)
+WebUI.delay(60)
 
