@@ -16,18 +16,5 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.json.*
 
-WebUI.openBrowser('')
-
-//simple localStorage key
-WebUI.navigateToUrl('https://staging.cicle.app/')
-
-WebUI.executeJavaScript(('localStorage.setItem(\'token\', \'' + GlobalVariable.accessTokenCicle) + '\')', null)
-
-WebUI.navigateToUrl('https://staging.cicle.app/')
-
-WebUI.executeJavaScript('localStorage.clear()', null)
-
-WebUI.verifyElementVisible(findTestObject('Page_Cicle/img_welcome'))
-
+WebUI.closeBrowser()

@@ -27,18 +27,16 @@ class tokenObject {
 def jsonObjectToken = new tokenObject( 
 	token: GlobalVariable.accessTokenGlints,
 )
-
-//def jsonObject = [session: jsonObjectToken]
-
 class localStorage {
 	Object session
 }
 def jsonObject = new localStorage(
 	session: jsonObjectToken,
 )
-//jsonString =  new JsonBuilder( jsonObject ).toPrettyString()
 def jsonString = JsonOutput.toJson(jsonObject)
 WebUI.navigateToUrl('https://employers.staging.glints.id')
 WebUI.executeJavaScript("localStorage.setItem('glintsEmployersApp','" + jsonString + "')", null)
 WebUI.navigateToUrl('https://employers.staging.glints.id/dashboard')
-WebUI.delay(60)
+WebUI.verifyElementVisible(findTestObject('Page_glints/card_jobList'))
+WebUI.executeJavaScript('localStorage.clear()', null)
+
