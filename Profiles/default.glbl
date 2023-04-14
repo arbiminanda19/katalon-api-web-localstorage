@@ -59,4 +59,9 @@
       <initValue>''</initValue>
       <name>accessTokenGlints</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>password</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
