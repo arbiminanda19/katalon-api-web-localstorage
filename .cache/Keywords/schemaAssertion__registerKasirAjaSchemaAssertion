@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "3424C00929ADE3EBD47D8B5BE2104EA3",
+  "keywordClasses": [
+    {
+      "name": "schemaAssertion.RegisterKasirAjaSchemaAssertion",
+      "keywordMethods": [
+        {
+          "name": "registerKasirAjaSchemaAssertion",
+          "parameters": [
+            {
+              "name": "response",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

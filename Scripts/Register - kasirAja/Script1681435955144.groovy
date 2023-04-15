@@ -31,3 +31,5 @@ response = WS.sendRequest(findTestObject('Register - kasirAja', [('name') : Glob
 
 WS.verifyResponseStatusCode(response, 201)
 
+CustomKeywords.'schemaAssertion.RegisterKasirAjaSchemaAssertion.registerKasirAjaSchemaAssertion'(response)
+
